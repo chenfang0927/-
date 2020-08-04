@@ -1,0 +1,80 @@
+作业
+1. 三合一
+2. 当天练习独立完成
+3. 对象转换为字符串练习
+    (1). 创建父子类,添加实例变量
+            创建父类:人(姓名,年龄)
+            创建子类:学生(成绩)
+    (2). 创建父子对象,直接打印.
+            格式: 我是xx,今年xx.
+                 我是xx,今年xx,成绩是xx.
+    (3). 通过eval + __repr__拷贝对象,
+         修改拷贝前对象的实例变量,
+         打印拷贝后对象的实例变量.
+
+4. 重写Skill类相关函数,完成下列功能.
+    class Skill:
+        def __init__(self, name="", atk_rate=0.0, cost_sp=0, duration=0):
+            self.name = name
+            self.atk_rate = atk_rate
+            self.cost_sp = cost_sp
+            self.duration = duration
+
+    # 员工列表
+    list_skills = [
+        Skill("乾坤大挪移",3,100,60),
+        Skill("九阳神功",2.5,80,50),
+        Skill("乾坤大挪移", 3, 100, 60),
+        Skill("六脉神剑",2,50,3)
+    ]
+
+    在技能列表中查找的Skill("九阳神功")索引
+    在技能列表中查找的Skill("乾坤大挪移")的数量
+    查攻击力比例atk_rate最小的技能
+    根据攻击力比例atk_rate排序
+
+5.  使用面向对象思想,描述下列情景.
+    张无忌使用乾坤大挪移(眩晕+伤害)攻击
+    张无忌使用九阳神功(伤害+击飞)攻击
+    还可能使用其他技能攻击
+    要求：增加其他技能，人的代码不变。
+
+6.  自定义算法实现下列功能
+    list01 = [3,9,34,26,5,6,7,8,9,6]
+    在list01中找出最小值
+    对liest01进行降序排列
+    删除list01中大于10的元素
+    删除list01中重复的元素
+    体会编程思想
+
+7.  画出2048核心算法左右移动的内存图
+    list_merge = None
+    map = [
+        [2, 2, 8, 16],
+        [4, 2, 0, 2],
+        [2, 4, 2, 4],
+        [0, 4, 0, 4],
+    ]
+    def move_left():
+        global list_merge
+        for line in map:
+            list_merge = line
+            merge()
+
+    def move_right():
+        global list_merge
+        for line in map:
+            list_merge = line[::-1]
+            merge()
+            line[::-1] = list_merge
+
+    move_left()
+    move_right()
+
+8.  (选做) 2048 核心算法
+   完成向上向下移动
+   要求:调用向左向右函数
+   思路:将二维列表进行转置(列变行),调用左右移动函数,再将二维列表进行转置(列变行)
+
+
+

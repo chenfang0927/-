@@ -1,0 +1,17 @@
+作业
+1. 三合一
+2. 当天练习独立完成
+3. 参照student_info_manager.py完成员工管理系统.
+    class EmployeeModel:
+        def __init__(self, eid=0, did=0, name="", money=0.0):
+            self.eid = eid # 员工编号
+            self.did = did # 部门编号
+            self.name = name # 姓名
+            self.money = money # 薪资
+    (选做)完成修改功能
+4.将employee_info_manager.py分解为四个模块
+5. 准备面向对象答辩内容
+链接：https://pan.baidu.com/s/1S8QtpwXS9Vbe77e3oQ0RlA
+提取码：57k2
+
+

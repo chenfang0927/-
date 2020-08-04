@@ -1,0 +1,101 @@
+1. 三合一
+2. 当天练习独立完成
+3. 不执行程序,说出程序执行结果.
+def func01(list_target):
+    print(list01)
+
+def func02(*args):
+    print(args)
+
+def func03(p1,p2,*,p4,**kwargs):
+    print(p1)
+    print(p2)
+    print(p4)
+    print(kwargs)
+
+func01([1,2,3])
+func02(*[1,2,3])
+func03(10,20,p4 = 30,p5 = 40)
+
+4. 参照to_student_for_month01/常用函数.rar,
+   在下列网站中自学.
+   https://docs.python.org/zh-cn/3/
+   https://www.runoob.com/python3/python3-tutorial.html
+
+5.  --定义函数,将列表中奇数设置为1
+    --定义函数,将列表中奇数删除
+    测试数据:[3,7,5,6,7,8,9,13]
+    结论:在列表中删除多个元素,倒序删除
+
+6.
+# 商品列表
+list_commodity_infos = [
+    {"cid": 1001, "name": "屠龙刀", "price": 10000},
+    {"cid": 1002, "name": "倚天剑", "price": 10000},
+    {"cid": 1003, "name": "金箍棒", "price": 52100},
+    {"cid": 1004, "name": "口罩", "price": 20},
+    {"cid": 1005, "name": "酒精", "price": 30},
+]
+
+# 订单列表
+list_orders = [
+    {"cid": 1001, "count": 1},
+    {"cid": 1002, "count": 3},
+    {"cid": 1005, "count": 2},
+]
+
+--1.定义函数,打印所有商品信息,
+--格式：商品编号xx,商品名称xx,商品单价xx.
+--
+--2.定义函数,打印商品单价小于2万的商品信息
+--
+--3.定义函数,打印所有订单中的商品信息,
+--格式：商品名称xx,商品单价:xx,数量xx.
+--
+--4.定义函数,查找最贵的商品(使用自定义算法,不使用内置函数)
+--
+--5.定义函数,根据单价对商品列表升序排列
+
+7. 以万物皆对象的思想，洞察你身边的客观事物,挑选2个创建类和对象.
+    目标:使用计算机描述生活
+    体会:现实事物  -抽象->  类  -具体-> 对象
+
+8. 画出下列代码内存图
+    class Phone:
+        def __init__(self, brand, price, color):
+            self.brand = brand
+            self.price = price
+            self.color = color
+    # 1
+    list_phones = [
+        Phone("华为1", 5999, "蓝色"),
+        Phone("华为2", 6999, "红色"),
+        Phone("苹果1", 9999, "金色"),
+        Phone("苹果2", 7999, "白色"),
+        Phone("三星2", 4999, "白色"),
+    ]
+
+    # 2
+    for item in list_phones:
+        if item.color == "白色":
+            item.price = 0
+    print(list_phones[0].price)  # ?
+    print(list_phones[-1].price) # ?
+
+    # 3
+    def find():
+        for item in list_phones:
+            if item.brand == "华为2":
+                return item
+    result = find()
+    print(result.brand,result.price,result.color)# ?
+
+
+
+
+
+
+
+
+
+
