@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body><h1 id='timeBox'>00.00.00</h1>
+    <script>
+
+        function addZero(num){
+            return num<10?'0'+num:num+''
+        }
+        var now =new Date();
+        console.log(now)
+       var y= now.getFullYear()
+       var m =now.getMonth()
+        var d =now.getDate()
+        console.log(`${y}/${m+1}/${d}`);
+        now.getDay()
+        now.getHours()
+        now.getMinutes()
+        now.getSeconds()
+        var timerId = setTimeout(function(){
+        var f=new Date('2020/7/31 19:00:00')
+        // console.log(f)
+        // console.log(now.getTime())
+        // console.log(f.getTime())
+        // var lelftime=f.getTime()-now.getTime()
+        var lelftime =(f-now)/1000
+        console.log(lelftime)
+        
+        var h=  addZero( parseInt(lelftime/3600))
+        var m=  addZero( parseInt(lelftime%3600/60))
+        var s=  addZero( parseInt(lelftime%60))
+    },1000)
+        
+        // var m1=addZero(parseInt (lelftime/1000%3600/60%60%60))
+        var h1 = document.getElementById('timeBox');
+        
+        h1.innerHTML =( `${h}:${m}:${s}`)
+      
+
+        
+        
+        
+        
+        
+        
+        </script>
+</body>
+</html>

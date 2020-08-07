@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单控件</title>
+</head>
+<body>
+    
+    <p><label for="username">姓名</label>
+        <input id='username' placeholder="用户名不能超过16位" type="text"></p>
+    <p><label for="pwd">密码</label>
+        <input id="pwd" placeholder="不要有特殊字符" type="text"></p>
+    <div>
+        性别：<input  name="gender" checked='checked' type="radio">男
+        <input name="gender" type="radio">女
+        <input name="gender" type="radio">保密
+    </div>
+    <div>
+        爱好：<input type="checkbox" >抽烟
+        <input type="checkbox">喝酒
+        <input checked type="checkbox">烫头
+    </div>
+    <div>
+        上床头像：<input type="file">
+    </div>
+    <div>
+        班级:
+        <select name="" id="">
+            <option value="">--请选择--</option>
+            <option selected value="">AID2005</option>
+        </select>
+    </div>
+    <div>
+        留言：<textarea name="" id="" cols="30" rows="1"></textarea>
+    </div>
+    <div>
+        <input type="button" value="普通按钮">
+        <input type="submit">
+        <input type="reset" >
+        
+    </div>
+</body>
+</html>

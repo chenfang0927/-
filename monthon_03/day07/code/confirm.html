@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>确认框</title>
+</head>
+<body>
+    <h1>hello world!</h1>
+    <button id="btn">清空h1</button>
+    <script>
+        var h1 = document.getElementsByTagName('h1')[0];
+        var btn = document.getElementById('btn');
+        // 点击按钮时  清空h1的内容
+        btn.onclick = function(){
+            var res = confirm('确定要清空吗？');
+            console.log(res);//用户确定 返回true  取消返回false
+            if (res){
+                h1.innerHTML = '';
+            }
+        } 
+    </script>
+</body>
+</html>

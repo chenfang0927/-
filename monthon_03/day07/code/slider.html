@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>轮播图</title>
+    <style>
+      #fader {
+        width: 739px;
+        height: 419px;
+        margin: 0 auto;
+        position: relative;
+      }
+      #fader > img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+      #fader > img.active {
+        /* z-index: 5; */
+        opacity: 1;
+      }
+      #faderCon img {
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+      }
+      #faderCon img.rr {
+        right: 0;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        // 所有图片
+        var items = document.getElementsByClassName("item");
+        // 左侧按钮
+        var ll = document.getElementsByClassName("ll")[0];
+        // 右侧按钮
+        var rr = document.getElementsByClassName("rr")[0];
+        var i = 0; //默认显示第一张图片
+        rr.onclick = function() {
+          // 点击右侧图标时  隐藏当前的图片
+          items[i].className = "item";
+          i++; //找到下一张图片的索引值
+          if (i == items.length) {
+            i = 0; //如果是最后一张图点击时  将i重置
+          }
+          // 显示下一张图片
+          items[i].className = "item active";
+        };
+
+        ll.onclick = function() {
+          items[i].className = "item";
+          i--;
+          if (i == -1) {
+            i = items.length - 1;
+          }
+          items[i].className = "item active";
+        };
+
+        // 设置周期性定时器  实现自动切换图片(0-->1-->2..)
+        // 如果鼠标停在图片上 或停在左右小图标上时  停止定时器
+        // 如果鼠标移出图片(..)时 启动定时器
+        // ll.onmouseover
+        // ll.onmouseout
+      };
+    </script>
+  </head>
+  <body>
+    <div id="fader">
+      <img class="item active" src="../imgs/gm1-6.jpg" alt="" />
+      <img class="item" src="../imgs/gm2-6.jpg" alt="" />
+      <img class="item" src="../imgs/gm3-6.jpg" alt="" />
+      <img class="item" src="../imgs/gm4-6.jpg" alt="" />
+      <img class="item" src="../imgs/gm5-6.jpg" alt="" />
+      <div id="faderCon">
+        <img class="ll" src="../imgs/l1-6.png" alt="" />
+        <img class="rr" src="../imgs/r1-6.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

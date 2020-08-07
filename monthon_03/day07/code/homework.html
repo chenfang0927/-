@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>随机推荐图片</title>
+    <style>
+        ul,li{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        li{
+            float: left;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            var imgArr = [
+            "../imgs/bk0-8.jpg","../imgs/bk1-8.jpg","../imgs/bk2-8.jpg",
+            "../imgs/bk3-8.jpg","../imgs/bk4-8.jpg","../imgs/bk5-8.jpg",
+            "../imgs/bk6-8.jpg","../imgs/bk7-8.jpg","../imgs/bk8-8.jpg",
+            "../imgs/bk9-8.jpg"
+            ]
+            // 随机数 数组
+            var randomArr = []
+            while(true){
+                var i = Math.floor(Math.random()*imgArr.length)
+                if(randomArr.indexOf(i) == -1){
+                    // 判断数组中有没有这个随机数  -1表示没有
+                    randomArr.push(i)
+                }
+                if(randomArr.length == 3){
+                    break
+                }
+            }
+
+
+            // for (var j = 0;j<3;j++){
+            //     // 求随机数   0～长度-1的随机数
+            //     var i = Math.floor(Math.random()*imgArr.length)
+            //     randomArr.push(i)
+            // }
+            // console.log(randomArr)
+            // 休息10:07~10:20
+            // 通过随机索引值获取图片路径  拼接到字符串中
+            var html = '';
+            for(var i in randomArr){
+                // i 是randomArr的索引  randomArr[i]是随机索引值
+                var imgIndex = randomArr[i]
+                html += '<li><img src="'+imgArr[imgIndex]+'" alt=""></li>'
+            }
+            // console.log(html);
+            // 将拼接好的字符串放入页面中显示
+            var ul = document.getElementsByTagName('ul')[0];
+            ul.innerHTML = html
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        
+    </ul>
+</body>
+</html>

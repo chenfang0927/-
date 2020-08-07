@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倒计时</title>
+</head>
+<body>
+    <h1 id="timeBox">
+        00:00:00
+    </h1>
+    <script>
+        function addZero(num){
+            // 接收数字 如果输入的是一位数字补零显示
+            return num<10?'0'+num:num+''
+        }
+
+
+        // 计算当前时间距离今天中午12:00还有多久  显示在页面上
+        // 时：分：秒
+        var timer = setInterval(function(){
+        var start = new Date();
+        var timer=setInterval()
+        var end = new Date('2020/07/31 18:00:00')
+        // var end = new Date();
+        // end.setHours('12');
+        // end.setMinutes('0');
+        // end.setSeconds('0');
+        // console.log(start,end,end-start);
+        // 求时间差(秒)
+        var leftTime = parseInt((end-start)/1000) 
+        if(leftTime<=0){
+            clearInterval(timer)
+            h1.innerHTML=('倒计时结束')
+            return
+        }
+        // console.log(leftTime)
+        // 换算成时分秒
+        var h = addZero(parseInt(leftTime/3600));
+        var m = addZero(parseInt(leftTime % 3600 / 60));
+        var s = addZero(leftTime % 60);
+        console.log(`${h}:${m}:${s}`)
+    },1000)
+        // 休息10:58~10:15
+        // 显示到页面上(补零)
+        var h1 = document.getElementById('timeBox');
+    
+        h1.innerHTML = `${h}:${m}:${s}`;
+    </script>
+</body>
+</html>

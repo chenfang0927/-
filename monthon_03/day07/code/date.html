@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日期/时间</title>
+</head>
+<body>
+    <script>
+        var now = new Date();
+        // 获取指定日期的时间对象
+        var target = new Date('2020.10.1 12:00:00');
+        console.log(target)
+        // var leftTime = target.getTime() - now.getTime()
+        var leftTime = target - now//求相差的时间戳
+        console.log(leftTime)
+
+
+        console.log(now);
+        console.log(now.getTime());//时间戳  单位毫秒（ms）
+        读取
+        now.getFullYear()//年
+        now.getMonth()//月   从0开始  0～11
+        console.log(now.getDay())//星期
+        console.log(now.getDate())//日期
+        now.getHours()//时
+        now.getMinutes()//分
+        now.getSeconds()//秒
+        now.getMilliseconds()
+        设置
+        now.setFullYear('2000')
+        console.log(now)
+        now.setMonth('0')
+   
+    </script>
+    <!-- 在h1中显示当前时间   2020/7/3  10:50:0 -->
+    <h1 id="timeBox"></h1>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #dream{
+            width: 200px;
+            height: 300px;
+            background-color: red;
+            position: fixed;
+            right: 0;
+            bottom: -300px;
+            color: #fff;
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="dream">点击红色区域关闭</div>
+    <script>
+        var div = document.getElementById('dream');
+        var timer = setTimeout(function(){
+            div.style = 'bottom:0';
+        },3000)
+        //实现点击div 时将div的bottom改为-300px
+        // 同时再次设置一次性定时器 3s后显示div
+        div.onclick = function(){
+            this.style = 'bottom:-300px';
+            timer = setTimeout(function(){
+                div.style = 'bottom:0';
+            },5000)//消失需要2s   2+3=5
+        }
+    </script>
+</body>
+</html>

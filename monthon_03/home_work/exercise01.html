@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+      }
+      .red {
+        background-color: red;
+        color: red;
+      }
+      .blue {
+        background-color: blue;
+        color: blue;
+      }
+      .green {
+        background-color: green;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+    <p class="p">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nam
+      magnam neque error deserunt. Rerum nostrum earum, tempora nemo ex quam,
+      suscipit aliquid tenetur aperiam libero maxime nobis commodi veniam?
+    </p>
+    <select name="" id="colorlist">
+      <option value="black[">请选择</option>
+      <option value="red">红色</option>
+      <option value="green">绿色</option>
+      <option value="blue">蓝色</option>
+      <script>
+        var c = document.getElementById("colorlist");
+        c.onchange = function() {
+          p.style = "color:" + this.value;
+        };
+      </script>
+    </select>
+    <script>
+      var divs = document.getElementsByTagName("div");
+      var p = document.getElementsByTagName("p")[0];
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].onclick = function() {
+          p.style = "color:" + this.getAttribute("class");
+        };
+      }
+    </script>
+  </body>
+</html>

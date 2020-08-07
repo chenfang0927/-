@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // .编写程序找出以下数组中最大元素的下标位置及该元素的值?
+      var arr = [10, 9, 1, 20, 19, 30, 5];
+      var number = [];
+      var max = 0;
+      for (var number in arr) {
+        if (arr[number] > max) {
+          var max = arr[number];
+        }
+      }
+      console.log(max);
+    </script>
+  </body>
+</html>

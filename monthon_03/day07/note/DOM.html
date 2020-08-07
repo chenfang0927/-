@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">启动</button>
+    <button id="btn2">停止</button>
+    <script>
+          // var timerID = setInterval(function,interval);
+      //    var a= setInterval(function(){
+      //         console.log('hello work');
+
+
+
+
+          // },1000)
+          var a =null
+          var star = document.getElementById('btn1')
+          var stop = document.getElementById('btn2')
+          star.onclick=function(){
+             a= setInterval(function(){
+              console.log('hello work')},1000)
+             }
+
+
+          stop.onclick=function(){clearInterval(timerId);
+
+          }
+    </script>
+  </body>
+</html>

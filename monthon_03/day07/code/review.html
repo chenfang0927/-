@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>回顾</title>
+</head>
+<body>
+    <script>
+        // 内置对象
+        // 1.自定义对象
+        var obj = {name:'qtx',age:18}
+        var json = {"name":"qtx","age":18}
+
+        for(var i in obj){
+            console.log(obj[i])
+        }
+
+        // 2.数组
+        var arr = [1,2,3,4]
+        arr[5] = 6
+
+        // 添加、删除数组元素
+        // 数组转字符串
+        // [2020,01,01]      join('/')
+       //   '2020/01/01'
+
+       // 顺序操作   倒序 排序
+    //    function asc(a,b){
+    //        return a-b
+    //    }  
+    //    function desc(a,b){
+    //        return b-a
+    //    }    
+    //    arr.sort(asc)
+
+        // 3.字符串
+        var str1 = 'abcd'
+        // var str2 = new String('abcd')
+
+        // 按位置查找
+        // 查找索引值
+        // 截取字符串
+        // 分割字符串   '2020/01/01'   split('/')  [2020,01,01]
+
+        // 正则表达式对象
+        var reg = /is/ig;
+        var reg2 = new RegExp('is','ig');
+        reg.test(str)
+        reg.lastIndex = 0
+        reg.test(str)
+
+        // 查找字符串
+        // 替换字符串
+
+
+ 
+        // 4.Math   (随机数)
+        Math.ceil()
+        Math.floor()
+        Math.round()
+
+        // 0~9
+        Math.floor(Math.random()*10)
+        parseInt(Math.random()*10)
+        
+
+    </script>
+</body>
+</html>

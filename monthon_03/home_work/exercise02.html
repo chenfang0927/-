@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="count"></h1>
+  </body>
+  <script>
+        //定义当前时间和目标时间
+        var nowtime = new Date()
+        var endtime = new Date('202/03/13 00:00:00')
+        // //获取相差时间间隔
+        var lefttime = Math.floor((endtime.getTime() - nowtime.getTime())/1000)
+        var h =  Math.floor(lefttime/3600)      //换算小时
+        var m = Math.floor(lefttime/60%60)    //换算分钟
+        var s  = Math.floor(lefttime%60)    //换算秒
+        var str = '距离2020/03/13 还有'+h+'时'+m+'分'+s+'秒'
+        var h1=Comment
+        h1.innerHTML = str
+  </script>
+</html>
